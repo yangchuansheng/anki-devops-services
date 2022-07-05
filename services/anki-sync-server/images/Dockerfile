@@ -13,7 +13,10 @@ ARG PYTHONUSERBASE
 RUN sh ./bin/download-release.sh && \
 	pip3 install --upgrade pip && \
     pip3 install --user -r ./release/requirements.txt && \
-    pip3 install --upgrade protobuf==3.20.1
+    pip3 uninstall protobuf && \
+    pip3 uninstall google && \
+    pip3 install google && \
+    pip3 install protobuf==3.20.1
 
 # -- DEPLOYER --
 FROM python:3.9-slim-buster
