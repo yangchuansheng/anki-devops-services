@@ -13,8 +13,8 @@ ARG PYTHONUSERBASE
 RUN sh ./bin/download-release.sh && \
 	pip3 install --upgrade pip && \
     pip3 install --user -r ./release/requirements.txt && \
-    pip3 uninstall --no-input protobuf && \
-    pip3 uninstall --no-input google && \
+    pip3 uninstall -y protobuf && \
+    pip3 uninstall -y google && \
     pip3 install --user google && \
     pip3 install --user protobuf==3.20.1
 
