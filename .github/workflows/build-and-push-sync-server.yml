@@ -52,8 +52,8 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ankicommunity/anki-sync-server:latest${{ steps.extract_branch.outputs.branchtag }}
-            ankicommunity/anki-sync-server:${{ steps.get_date.outputs.datetag }}
+            yangchuansheng/anki-sync-server:latest${{ steps.extract_branch.outputs.branchtag }}
+            yangchuansheng/anki-sync-server:${{ steps.get_date.outputs.datetag }}
           build-args: |
             ANKISYNCD_PORT=${{ env.ANKISYNCD_PORT }}
             ANKISYNCD_BASE_URL=${{ env.ANKISYNCD_BASE_URL }}
